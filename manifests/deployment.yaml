@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ekspose
+  name: ekspose
+  namespace: ekspose
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ekspose
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ekspose
+    spec:
+      containers:
+      - image: viveksinghggits/ekspose:0.1.0
+        name: ekspose
+        resources: {}
+      serviceAccountName: ekspose-sa
+status: {}
