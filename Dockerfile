@@ -1,5 +1,5 @@
 FROM alpine
 
-COPY ./ekspose /usr/loca/bin/ekspose
+COPY ./ekspose /usr/local/bin/ekspose
 
-ENTRYPOINT [ "/usr/loca/bin/ekspose" ]
+ENTRYPOINT [ "/usr/local/bin/ekspose" ]
